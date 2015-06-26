@@ -22,9 +22,12 @@
 					<h1><a href="http://patrickpissurno.github.io/index.html">Patrick Pissurno</a>'s Website</h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="http://patrickpissurno.github.io/index.html">Home</a></li>
-							<li><a href="http://patrickpissurno.github.io/portfolio.html">Portfolio</a></li>
-							<li><a href="http://patrickpissurno.github.io/games/support.html">Support</a></li>
+							<li><a class="lang-en" href="http://patrickpissurno.github.io/index.html">Home</a>
+								<a class="lang-br" href="http://patrickpissurno.github.io/index.html">Início</a></li>
+							<li><a class="lang-en" href="http://patrickpissurno.github.io/portfolio.html">Portifolio</a>
+								<a class="lang-br" href="http://patrickpissurno.github.io/portfolio.html">Portifólio</a></li>
+							<li><a class="lang-en" href="http://patrickpissurno.github.io/games/support.html">Support</a>
+								<a class="lang-br" href="http://patrickpissurno.github.io/games/support.html">Suporte</a></li>
 							<!--
 							<li>
 								<a href="#" class="icon fa-angle-down">Layouts</a>
@@ -53,29 +56,31 @@
 				<section id="main" class="container">
 					<header>
 						<h2>404</h2>
-						<h3>OOPS! The page you requested was not found on this server.</h3>
-						<h4>That's all we know.</h4>
+						<h3 class="lang-en">OOPS! The page you requested was not found on this server.</h3>
+						<h4 class="lang-en">That's all we know.</h4>
+						<h3 class="lang-br">OOPS! A página que você estava procurando não foi encontrada.</h3>
+						<h4 class="lang-br">Isso é tudo que sabemos.</h4>
 					</header>
 				</section>
 
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+						<!--<li><a href="http://www.facebook.com/patrickpissurno.pessoal" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>-->
+						<li><a href="http://www.facebook.com/patrickpissurno.pessoal" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<!--<li><a href="http://www.instagram.com/coisadepro" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>-->
+						<li><a href="http://www.github.com/patrickpissurno" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://plus.google.com/u/0/108767828621632244898/" target="_blank" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Patrick Pissurno. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Patrick Pissurno. <a class="lang-en keepInline">All rights reserved.</a> <a class="lang-br keepInline">Todos os direitos reservados.</a> </li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li><a href="#" onclick="ChangeLang('br');" class="lang-en">Ver em Português</a><a href="#" onclick="ChangeLang('en');" class="lang-br">Show in English</a></li>
 					</ul>
 				</footer>
 
 		</div>
 
 		<!-- Scripts -->
+			<script src="assets/js/lang.js"></script>
 			<script src="http://patrickpissurno.github.io/assets/js/jquery.min.js"></script>
 			<script src="http://patrickpissurno.github.io/assets/js/jquery.dropotron.min.js"></script>
 			<script src="http://patrickpissurno.github.io/assets/js/jquery.scrollgress.min.js"></script>
