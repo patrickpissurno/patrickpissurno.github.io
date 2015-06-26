@@ -3759,3 +3759,9 @@
 			}
 
 	}
+	
+	/* New */
+	.keepInline
+	{
+		display:inline;
+	}
