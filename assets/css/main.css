@@ -3775,3 +3775,11 @@
 	{
 		display:inline;
 	}
+	
+	canvas.slider
+	{
+		background-color:#F8F8F8;
+		height:200px;
+		width:100%;
+		border:1px solid #E5E5E5;
+	}
