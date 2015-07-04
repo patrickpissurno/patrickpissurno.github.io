@@ -2817,7 +2817,7 @@
 		position: fixed;
 		top: 0;
 		width: 100%;
-		z-index: 10000;
+		z-index: 9990;
 	}
 
 		#header h1 {
@@ -3783,3 +3783,13 @@
 		width:100%;
 		border:1px solid #E5E5E5;
 	}
+	canvas.slider:hover
+	{
+		cursor:pointer;
+	}
+	
+	.stop-scrolling {
+	  height: 100%;
+	  overflow: hidden;
+	}
+	
