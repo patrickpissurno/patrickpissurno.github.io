@@ -16,10 +16,15 @@
 				indent = Math.max(0, $this.parents('li').length - 1),
 				href = $this.attr('href'),
 				target = $this.attr('target');
-
+				//DEBUG
+			if($this.attr('class').indexOf("lang") >= 0)
+				var class_add = $this.attr('class').substr($this.attr('class').indexOf("lang"),7);
+			else
+				var class_add = "";
+			//DEBUG
 			b.push(
 				'<a ' +
-					'class="link depth-' + indent + '"' +
+					'class="link depth-' + indent + ' ' + class_add + '"' +
 					( (typeof target !== 'undefined' && target != '') ? ' target="' + target + '"' : '') +
 					( (typeof href !== 'undefined' && href != '') ? ' href="' + href + '"' : '') +
 				'>' +
@@ -31,7 +36,6 @@
 		});
 
 		return b.join('');
-
 	};
 
 	/**

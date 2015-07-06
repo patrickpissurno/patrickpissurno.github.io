@@ -1,3 +1,5 @@
+const DEBUG_MODE = true;
+
 var Slider = function(e)
 {
 	this.canvas = e;
@@ -36,7 +38,9 @@ var Slider = function(e)
 			this.pos = {x:sX, y:this.slider.canvas.height/2 - GetImageRealSize(this).height/2};
 			this.size = GetImageRealSize(this);
 			this.slider.sprites.push(this);
-			setTimeout(function(){console.clear();},1);
+			
+			if(!DEBUG_MODE)
+				setTimeout(function(){console.clear();},1);
 		};
 	}
 	

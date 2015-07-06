@@ -47,7 +47,7 @@
 					'</div>'
 				)
 					.appendTo($body);
-
+				
 			// Navigation Panel.
 				$(
 					'<div id="navPanel">' +
@@ -67,7 +67,10 @@
 						target: $body,
 						visibleClass: 'navPanel-visible'
 					});
-
+			
+			//Call an Update so the page updates its language
+			setTimeout(UpdatePage,1);
+			
 			// Fix: Remove navPanel transitions on WP<10 (poor/buggy performance).
 				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
 					$('#navButton, #navPanel, #page-wrapper')
@@ -92,6 +95,7 @@
 					});
 
 				});
+
 
 			}
 
