@@ -95,6 +95,7 @@ var Slider = function(e)
 	
 	this.ShowBig = function(i){
 		this.Pause();
+		
 		var bigImage = document.createElement("canvas");
 		bigImage.setAttribute("style","background: rgba(0, 0, 0, 0.5); height: 100%; left: 0; line-height: 100%; position: fixed; top: 0; width: 100%; z-index: 10000;");
 		bigImage.setAttribute("id", "bigImage");
@@ -109,7 +110,7 @@ var Slider = function(e)
 			var mSize = bigImage.offsetWidth*.85;
 			
 		bigImage.slider = this;
-		bigImage.onmousedown = function(){ this.slider.CloseBig()};
+		//bigImage.onmousedown = function(){ this.slider.CloseBig()};
 		var imageY = bigImage.offsetHeight/2 - GetImageRealSize(this.sprites[i], mSize).height/2;
 		DrawImage(ctx, this.sprites[i], bigImage.offsetWidth/2 - GetImageRealSize(this.sprites[i], mSize).width/2, imageY, mSize);
 		ctx.font="20px Source Sans Pro";
@@ -126,9 +127,44 @@ var Slider = function(e)
 		}
 		ctx.fillText(txt,bigImage.offsetWidth/2, bigImage.offsetHeight/2 + GetImageRealSize(this.sprites[i], mSize).height/2 + 20);
 		console.log(bigImage.offsetWidth/84);
+		
+		bigImage.style.opacity = 0;
+		
+		setTimeout(this.fadeInBig, 5, [bigImage, this]);
+		
 		//Disable Scroll
 		$('body').addClass('stop-scrolling').css('margin-right', bigImage.offsetWidth/84);
 		$('body').bind('touchmove', function(e){e.preventDefault()});
+	}
+	
+	this.fadeInBig = function(args)
+	{
+		bigImage = args[0];
+		_this = args[1];
+		var alpha = parseFloat(bigImage.style.opacity);
+		alpha += .05;
+		if(alpha > 1)
+			alpha = 1;
+		bigImage.style.opacity = alpha;
+		if(bigImage.style.opacity < 1)
+			setTimeout(_this.fadeInBig, 5, [bigImage, _this]);
+		else
+			bigImage.onmousedown = function(){ setTimeout(_this.fadeOutBig, 5, [bigImage, _this]) };
+	}
+	
+	this.fadeOutBig = function(args)
+	{
+		bigImage = args[0];
+		_this = args[1];
+		var alpha = parseFloat(bigImage.style.opacity);
+		alpha -= .05;
+		if(alpha < 0)
+			alpha = 0;
+		bigImage.style.opacity = alpha;
+		if(bigImage.style.opacity > 0)
+			setTimeout(_this.fadeOutBig, 5, [bigImage, _this]);
+		else
+			 _this.CloseBig();
 	}
 	
 	this.CloseBig = function(){
