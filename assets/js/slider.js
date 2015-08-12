@@ -1,4 +1,4 @@
-const DEBUG_MODE = true;
+const DEBUG_MODE = false;
 
 var Slider = function(e)
 {
@@ -26,7 +26,7 @@ var Slider = function(e)
 	}
 	
 	this.started = false;
-	this.awr = 8;
+	this.awr = 10;
 	this.hSlideOffset = 0;
 	
 	//START
@@ -42,10 +42,10 @@ var Slider = function(e)
 			this.pos = {x:sX, y:this.slider.canvas.height/2 - GetImageRealSize(this).height/2};*/
 			this.size = GetImageRealSize(this);
 			this.slider.sprites.push(this);
-			this.slider.awr = 8;
+			this.slider.awr = 10;
 			
 			if(!DEBUG_MODE)
-				setTimeout(function(){console.clear();},1);
+				setTimeout(function(){console.clear();},30);
 		};
 	}
 	
