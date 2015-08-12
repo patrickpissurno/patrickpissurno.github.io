@@ -26,7 +26,7 @@ var Slider = function(e)
 	}
 	
 	this.started = false;
-	
+	this.awr = 8;
 	this.hSlideOffset = 0;
 	
 	//START
@@ -42,6 +42,7 @@ var Slider = function(e)
 			this.pos = {x:sX, y:this.slider.canvas.height/2 - GetImageRealSize(this).height/2};*/
 			this.size = GetImageRealSize(this);
 			this.slider.sprites.push(this);
+			this.slider.awr = 8;
 			
 			if(!DEBUG_MODE)
 				setTimeout(function(){console.clear();},1);
@@ -110,7 +111,18 @@ var Slider = function(e)
 		}
 		setTimeout(_this.loop, 50, _this);
 	}
-	setTimeout(this.loop, 50, this);
+
+	this.delayedAwake = function(_this)
+	{
+		if(_this.awr > 0)
+		{
+			_this.awr --;
+			setTimeout(_this.delayedAwake, 50, _this);
+		}
+		else
+			setTimeout(_this.loop, 50, _this);
+	}
+	setTimeout(this.delayedAwake, 50, this);
 	
 	//Methods
 	this.Play = function(){
