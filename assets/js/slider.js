@@ -35,17 +35,12 @@ var Slider = function(e)
 		var sprite = new Image();
 		sprite.src = e.getAttribute("name")+"/"+i+".png";
 		sprite.slider = this;
+		sprite.onerror = function(){if(!DEBUG_MODE){console.clear();}}
+		sprite.onabort = function(){if(!DEBUG_MODE){console.clear();}}
 		sprite.onload = function(){
-			/*var sX = 0;
-			for(var i=0; i<this.slider.sprites.length; i++)
-				sX += GetImageRealSize(this.slider.sprites[i]).width + 1;
-			this.pos = {x:sX, y:this.slider.canvas.height/2 - GetImageRealSize(this).height/2};*/
 			this.size = GetImageRealSize(this);
 			this.slider.sprites.push(this);
 			this.slider.awr = 10;
-			
-			if(!DEBUG_MODE)
-				setTimeout(function(){console.clear();},30);
 		};
 	}
 	
