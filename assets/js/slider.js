@@ -25,6 +25,10 @@ var Slider = function(e)
 		e.srcElement.mouse.pressed = false;
 	}
 	
+	this.started = false;
+	
+	this.hSlideOffset = 0;
+	
 	//START
 	for(var i=0; i<30; i++)
 	{
@@ -32,10 +36,10 @@ var Slider = function(e)
 		sprite.src = e.getAttribute("name")+"/"+i+".png";
 		sprite.slider = this;
 		sprite.onload = function(){
-			var sX = 0;
+			/*var sX = 0;
 			for(var i=0; i<this.slider.sprites.length; i++)
 				sX += GetImageRealSize(this.slider.sprites[i]).width + 1;
-			this.pos = {x:sX, y:this.slider.canvas.height/2 - GetImageRealSize(this).height/2};
+			this.pos = {x:sX, y:this.slider.canvas.height/2 - GetImageRealSize(this).height/2};*/
 			this.size = GetImageRealSize(this);
 			this.slider.sprites.push(this);
 			
@@ -44,7 +48,21 @@ var Slider = function(e)
 		};
 	}
 	
-	//LOOP
+	//START METHOD
+	this.start = function(_this)
+	{
+		_this.hSlideOffset = _this.sprites.length <= 4 ? ((_this.canvas.width - _this.sprites[0].size.width * (_this.sprites.length - 1)) / _this.sprites.length) : 1;
+		
+		var sX = 0;
+		for(var i=0; i<_this.sprites.length; i++)
+		{
+			var spr = _this.sprites[i];
+			spr.pos = {x:sX, y:_this.canvas.height/2 - GetImageRealSize(spr).height/2};
+			sX += GetImageRealSize(spr).width + _this.hSlideOffset;
+		}
+	}
+	
+	//LOOP METHOD
 	this.loop = function(_this)
 	{
 		if(_this.isShowBig != -1)
@@ -54,17 +72,27 @@ var Slider = function(e)
 		}
 		
 		_this.context.clearRect(0,0,_this.canvas.width, _this.canvas.height);
+		
+		if(!_this.started){
+			_this.start(_this);
+			_this.started = true;
+		}
+			
+		
 		for(var i=0; i<_this.sprites.length; i++)
 		{
 			//Update Each Sprite
 			var spr = _this.sprites[i];
+
+			var _w = _this.hSlideOffset;
+			
 			DrawImage(_this.context, spr, spr.pos.x, spr.pos.y);
 			if(spr.pos.x > _this.canvas.width)
 			{
 				if(i != _this.sprites.length - 1)
-					spr.pos.x = _this.sprites[i+1].pos.x - spr.size.width - 1;
+					spr.pos.x = _this.sprites[i+1].pos.x - spr.size.width - _w;
 				else
-					spr.pos.x = _this.sprites[0].pos.x - spr.size.width - 2;
+					spr.pos.x = _this.sprites[0].pos.x - spr.size.width - (_w + 1);
 			}
 			
 			var mouse = _this.canvas.mouse;
