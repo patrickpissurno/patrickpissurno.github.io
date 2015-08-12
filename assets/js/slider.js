@@ -1,4 +1,4 @@
-const DEBUG_MODE = false;
+const DEBUG_MODE = true;
 
 var Slider = function(e)
 {
@@ -205,7 +205,7 @@ var Slider = function(e)
 		this.Play();
 	}
 	
-	kkk = this;
+	//kkk = this;
 }
 
 
