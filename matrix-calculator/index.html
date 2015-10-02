@@ -11,168 +11,222 @@
 				<tr>
 					<td>
 						<center>
-							<a style="text-align:center;font-size:40px;">Calculadora de Matrizes</a>
+							<a style="text-align:center;font-size:40px;">Calculadora de Matrizes</a><br>
+							<div id = "err" style = "color:#F00; text-align:center; display:none"></div><br>
+							<table class="outer">
+								<tr class="outer">
+									<th class="outer" style = "vertical-align:center;">
+										<a style="color:#F00; font-size:22px;">Matriz 1</a><br>
+										<a style="color:#000; font-size:12px;" id = "m1_info">Tem inversa: ? | É simétrica: ?</a>
+									</th>
+									<th class="outer" style = "vertical-align:center;">
+										<a style="color:#00F; font-size:22px;">Matriz 2</a><br>
+										<a style="color:#000; font-size:12px;" id = "m2_info">Tem inversa: ? | É simétrica: ?</a>
+									</th>
+									<th class="outer" style = "vertical-align:center;">
+										<a style="color:#0A0; font-size:22px;">Matriz Resultado</a><br>
+										<a style="color:#000; font-size:12px;" id = "m3_info">Tem inversa: ? | É simétrica: ?</a>
+									</th>
+								</tr>
+								<tr class="outer"  style = "display : none">
+									<td>
+										<center>
+											<table id = "tabela_matriz_1" style = "display:none;"></table>
+										</center>
+									</td>
+									<td>
+										<center>
+											<table id = "tabela_matriz_2" style = "display:none;"></table>
+										</center>
+									</td>
+									<td>
+										<center>
+											<table id = "tabela_matriz_3" style = "display:none;"></table>
+										</center>
+									</td>
+								</tr>
+								<tr class="outer">
+									<td class = "outer" style = "vertical-align:bottom">
+										<center>
+											<div style = "margin:5 5 5 5">
+												<input id="linha_amount_1" placeholder = "# de linhas" style = "width:90;">
+												<input id="coluna_amount_1" placeholder = "# de colunas" style = "width:90;">
+												<button onclick = "alterTable('1');">Alterar</button>
+											</div>
+										</center>
+									</td>
+									<td class = "outer" style = "vertical-align:bottom">
+										<center>
+											<div style = "margin:5 5 5 5">
+												<input id="linha_amount_2" placeholder = "# de linhas" style = "width:90;">
+												<input id="coluna_amount_2" placeholder = "# de colunas" style = "width:90;">
+												<button onclick = "document.getElementById('linha_amount_1').value = 2; document.getElementById('coluna_amount_1').value = 2;alterTable('1');alterTable('2');">Alterar</button>
+											</div>
+										</center>
+									</td>
+									<td class = "outer" style = "background-color : #333">
+										<center>
+											<canvas id="display" style = "background-color : #333;">
+											</canvas>
+										</center>
+									</td>
+								</tr>
+							</table>
 						</center>
-						<div id = "err" style = "font-color:#F00; text-align:center;"></div><br>
-						<table class="outer">
-							<tr class="outer">
-								<th class="outer" style = "vertical-align:center;">
-									<a style="color:#F00; font-size:22px;">Matriz 1</a><br>
-									<a style="color:#000; font-size:12px;" id = "m1_info">Tem inversa: ? | É simétrica: ?</a>
-								</th>
-								<th class="outer" style = "vertical-align:center;">
-									<a style="color:#00F; font-size:22px;">Matriz 2</a><br>
-									<a style="color:#000; font-size:12px;" id = "m2_info">Tem inversa: ? | É simétrica: ?</a>
-								</th>
-								<th class="outer" style = "vertical-align:center;">
-									<a style="color:#0A0; font-size:22px;">Matriz Resultado</a><br>
-									<a style="color:#000; font-size:12px;" id = "m3_info">Tem inversa: ? | É simétrica: ?</a>
-								</th>
-							</tr>
-							<tr class="outer"  style = "display : none">
-								<td>
-									<center>
-										<table id = "tabela_matriz_1" style = "display:none;"></table>
-									</center>
-								</td>
-								<td>
-									<center>
-										<table id = "tabela_matriz_2" style = "display:none;"></table>
-									</center>
-								</td>
-								<td>
-									<center>
-										<table id = "tabela_matriz_3" style = "display:none;"></table>
-									</center>
-								</td>
-							</tr>
-							<tr class="outer">
-								<td class = "outer" style = "vertical-align:bottom">
-									<center>
-										<div style = "margin:5 5 5 5">
-											<input id="linha_amount_1" placeholder = "# de linhas" style = "width:90;">
-											<input id="coluna_amount_1" placeholder = "# de colunas" style = "width:90;">
-											<button onclick = "alterTable('1');">Alterar</button>
-										</div>
-									</center>
-								</td>
-								<td class = "outer" style = "vertical-align:bottom">
-									<center>
-										<div style = "margin:5 5 5 5">
-											<input id="linha_amount_2" placeholder = "# de linhas" style = "width:90;">
-											<input id="coluna_amount_2" placeholder = "# de colunas" style = "width:90;">
-											<button onclick = "alterTable('2');">Alterar</button>
-										</div>
-									</center>
-								</td>
-								<td class = "outer" style = "background-color : #333">
-									<center>
-										<canvas id="display" style = "background-color : #333;">
-										</canvas>
-									</center>
-								</td>
-							</tr>
-						</table>
 						
 						<br>
-						
-						<button onclick = "sum();">Somar</button> <!-- Chama a função -->
-						<button onclick = "sub();">Subtrair</button> <!-- Chama a função -->
-						<button onclick = "if(m1.width==1 && m1.height == 1){multE();}else{mult();}">Multiplicar</button> <!-- Chama a função -->
-						<table style = "display:inline">
-							<tr>
-								<td>
-									<center>
-										<select id="transposta_id">
-										  <option value="1">Matriz 1</option>
-										  <option value="2">Matriz 2</option>
-										</select>
-									</center>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<center>
-										<button onclick = "transp()">Transposta</button> <!-- Chama a função -->
-									</center>
-								</td>
-							</tr>
-						</table>
-						<table style = "display:inline">
-							<tr>
-								<td>
-									<center>
-										<select id="det_id">
-										  <option value="1">Matriz 1</option>
-										  <option value="2">Matriz 2</option>
-										</select>
-									</center>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<center>
-										<button onclick = "det()">Determinante</button> <!-- Chama a função -->
-									</center>
-								</td>
-							</tr>
-						</table>
-						<table style = "display:inline">
-							<tr>
-								<td>
-									<center>
-										<select id="inversa_id">
-										  <option value="1">Matriz 1</option>
-										  <option value="2">Matriz 2</option>
-										</select>
-									</center>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<center>
-										<button onclick = "inversa()">Inversa</button> <!-- Chama a função -->
-									</center>
-								</td>
-							</tr>
-						</table>
-						<table style = "display:inline; margin-left:88px">
-							<tr>
-								<td>
-									<center>
-										<a style = "font-size:22px">Lei de formação: </a>
-									</center>
-								</td>
-							</tr><tr>
-								<td>
-									<center>
-										<a>Destino: </a>		
-										<select id="lei_de_formacao_id">
-										  <option value="1">Matriz 1</option>
-										  <option value="2">Matriz 2</option>
-										</select>
-									</center>
-								</td>
-							</tr><tr>
-								<td>
-									<input id = "lei_de_formacao_width" placeholder = "# de linhas" style = "width:84;"></input>
-									<input id = "lei_de_formacao_height" placeholder = "# de colunas" style = "width:85;"></input>
-								</td>
-							</tr><tr>
-								<td>
-									<input id = "lei_de_formacao_code" placeholder = "Digite aqui a lei de formação"></input>
-								</td>
-							</tr><tr>
-								<td>
-									<center>
-										<button onclick = "gerarLeiDeFormacao()">Gerar</button>
-									</center>
-								</td>
-							</tr>
-						</table>
-						<br>
-						<div style="width:100%;text-align:right;padding-top:15px">
-							<a style = "font-size:10px">Patrick Pissurno, Breno Ferreira</a>
+						<div>
+							<button onclick = "sum();">Somar</button> <!-- Chama a função -->
+							<button onclick = "sub();">Subtrair</button> <!-- Chama a função -->
+							<button onclick = "if(m1.width==1 && m1.height == 1){multE();}else{mult();}">Multiplicar</button> <!-- Chama a função -->
+							<table style = "display:inline">
+								<tr>
+									<td>
+										<center>
+											<select id="transposta_id">
+											  <option value="1">Matriz 1</option>
+											  <option value="2">Matriz 2</option>
+											</select>
+										</center>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<center>
+											<button onclick = "transp()">Transposta</button> <!-- Chama a função -->
+										</center>
+									</td>
+								</tr>
+							</table>
+							<table style = "display:inline">
+								<tr>
+									<td>
+										<center>
+											<select id="det_id">
+											  <option value="1">Matriz 1</option>
+											  <option value="2">Matriz 2</option>
+											</select>
+										</center>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<center>
+											<button onclick = "det()">Determinante</button> <!-- Chama a função -->
+										</center>
+									</td>
+								</tr>
+							</table>
+							<table style = "display:inline">
+								<tr>
+									<td>
+										<center>
+											<select id="inversa_id">
+											  <option value="1">Matriz 1</option>
+											  <option value="2">Matriz 2</option>
+											</select>
+										</center>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<center>
+											<button onclick = "inversa()">Inversa</button> <!-- Chama a função -->
+										</center>
+									</td>
+								</tr>
+							</table>
+							<table style = "display:inline;">
+								<tr>
+									<td>
+										<center>
+											<a style = "font-size:22px">Lei de formação: </a>
+										</center>
+									</td>
+								</tr><tr>
+									<td>
+										<center>
+											<a>Destino: </a>		
+											<select id="lei_de_formacao_id">
+											  <option value="1">Matriz 1</option>
+											  <option value="2">Matriz 2</option>
+											</select>
+										</center>
+									</td>
+								</tr><tr>
+									<td>
+										<input id = "lei_de_formacao_width" placeholder = "# de linhas" style = "width:84;"></input>
+										<input id = "lei_de_formacao_height" placeholder = "# de colunas" style = "width:85;"></input>
+									</td>
+								</tr><tr>
+									<td>
+										<input id = "lei_de_formacao_code" placeholder = "Digite aqui a lei de formação"></input>
+									</td>
+								</tr><tr>
+									<td>
+										<center>
+											<button onclick = "gerarLeiDeFormacao()">Gerar</button>
+										</center>
+									</td>
+								</tr>
+							</table>
+							<table style = "display:inline;">
+								<tr>
+									<td>
+										<center>
+											<a style = "font-size:22px">Transformações lineares</a>
+										</center>
+									</td>
+								</tr><tr>
+									<td>
+										<div id = "destino_id">								
+											<center>
+												<a>Destino: </a>		
+												<select id="transformacao_destino">
+												  <option value="1">Matriz 1</option>
+												  <option value="2">Matriz 2</option>
+												</select>
+											</center>
+										</div>
+									</td>
+								</tr><tr>
+									<td>
+										<center>
+											<a>Transformação: </a>		
+											<select id="transformacao_id" onchange = "transformacaoChanged()">
+											  <option value="1">Translação</option>
+											  <option value="2">Rotação</option>
+											  <option value="3">Escala</option>
+											</select>
+										</center>
+									</td>
+								</tr><tr>
+									<td>
+										<div id = "translacao_div">
+											<input id = "translacao_x" placeholder = "X" style = "width:106;"></input>
+											<input id = "translacao_y" placeholder = "Y" style = "width:106;"></input>
+										</div>
+										<div id = "rotacao_div" style = "display:none">
+											<center>
+												<input id = "rotacao_angle" placeholder = "Angle" style = "width:216;"></input>
+											</center>
+										</div>
+										<div id = "escala_div" style = "display:none">
+											<input id = "escala_val" placeholder = "Fator de escala" style = "width:216;"></input>
+										</div>
+									</td>
+								</tr><tr>
+									<td>
+										<center>
+											<button onclick = "aplicarTransformacao()">Aplicar</button>
+										</center>
+									</td>
+								</tr>
+							</table>
+							<br>
+							<div style="width:100%;text-align:right;padding-top:15px">
+								<a style = "font-size:10px">Patrick Pissurno, Breno Ferreira</a>
+							</div>
 						</div>
 					</td>
 				</tr>
@@ -210,6 +264,147 @@ var m3 = new matrix_size(0,0);	//Matriz Resultado
 
 var canvas = document.getElementById("display");
 var ctx = canvas.getContext("2d");
+
+function transformacaoChanged()
+{
+	var a = document.getElementById("transformacao_id").value;
+	if(a == "2")
+		document.getElementById("destino_id").value = "2";
+	document.getElementById("translacao_div").style.display = a == "1" ? "" : "none";
+	document.getElementById("destino_id").style.display = a == "1" ? "" : "none";
+	document.getElementById("rotacao_div").style.display = a == "2" ? "" : "none";
+	document.getElementById("escala_div").style.display = a == "3" ? "" : "none";
+}
+
+function aplicarTransformacao()
+{
+	var t = document.getElementById("transformacao_id").value;
+	var id = document.getElementById("transformacao_destino").value;
+	var m = id == "1" ? m1 : m2;
+	var m_t = id == "1" ? "2" : "1";
+	var checkVal = new RegExp("^[0-9||\\s|/.|/,]*$");
+	switch(t)
+	{
+		case "1":
+		
+			//VALIDATION
+			var arg1 = document.getElementById("translacao_x").value;
+			var arg2 = document.getElementById("translacao_y").value;
+			if(!(checkVal.test(arg1) && checkVal.test(arg2) && arg1.trim(" ") != "" && arg2.trim(" ") != "" ))
+			{
+				err("Os valores de X e Y não são válidos.");
+				break;
+			}
+			
+			if(m.width == 0 || m.height == 0)
+			{
+				err("A matriz destino não é válida.");
+				break;
+			}
+			
+			//Translação
+			replaceNulls(id);
+			document.getElementById("linha_amount_" + m_t).value = m.width;
+			document.getElementById("coluna_amount_" + m_t).value = m.height;
+			alterTable(m_t);
+			//changeTableSize(m_t, m);
+			for(var j=0; j<m.height; j++)	//j=0; j<colunas; j++
+			{
+				//Formatação dos IDs: t_IDdaMatriz_linha_coluna. Exemplo: t_1_1_2 (matriz 1, linha 1, coluna 2)
+				var _mx = document.getElementById("t_" + id + "_" + 0 + "_" + j);
+				var _my = document.getElementById("t_" + id + "_" + 1 + "_" + j);
+				var _tx = document.getElementById("t_" + m_t + "_" + 0 + "_" + j);
+				var _ty = document.getElementById("t_" + m_t + "_" + 1 + "_" + j);
+				//Você pode acessar o valor e definir através da propriedade value. Atenção: o tipo é string, logo precisa usar parseInt para converter pra int
+				//antes de realizar operações
+				_tx.value = parseFloat(document.getElementById("translacao_x").value);
+				_ty.value = parseFloat(document.getElementById("translacao_y").value);
+			}
+			UpdateDrawInfo();
+			sum();
+			break;
+		case "2":
+		
+			//VALIDATION
+			var arg1 = document.getElementById("rotacao_angle").value;
+			if(!(checkVal.test(arg1) && arg1.trim(" ") != ""))
+			{
+				err("O valor do ângulo não é válido.");
+				break;
+			}
+			
+			if(m2.width == 0 || m2.height == 0)
+			{
+				err("A matriz 2 (destino) não é válida.");
+				break;
+			}
+			
+			//Rotação
+			m_t = "2";
+			id = "1";
+			var m = id == "1" ? m1 : m2;
+			
+			replaceNulls(id);
+			document.getElementById("linha_amount_" + id).value = 2;
+			document.getElementById("coluna_amount_" + id).value = 2;
+			alterTable(id);
+			
+			var rotA = parseFloat(document.getElementById("rotacao_angle").value);
+			//changeTableSize(m_t, m);
+			
+			var _00 = document.getElementById("t_" + id + "_" + 0 + "_" + 0);
+			var _01 = document.getElementById("t_" + id + "_" + 0 + "_" + 1);
+			var _10 = document.getElementById("t_" + id + "_" + 1 + "_" + 0);
+			var _11 = document.getElementById("t_" + id + "_" + 1 + "_" + 1);
+			
+			_00.value = Math.cos(degToRag(rotA));
+			_01.value = -Math.sin(degToRag(rotA));
+			_10.value = Math.sin(degToRag(rotA));
+			_11.value = Math.cos(degToRag(rotA));
+			
+			UpdateDrawInfo();
+			mult();
+			break;
+		case "3":
+			//VALIDATION
+			var arg1 = document.getElementById("escala_val").value;
+			if(!(checkVal.test(arg1) && arg1.trim(" ") != ""))
+			{
+				err("O valor do fator de escala não é válido.");
+				break;
+			}
+			
+			if(m2.width == 0 || m2.height == 0)
+			{
+				err("A matriz 2 (destino) não é válida.");
+				break;
+			}
+		
+			//Escala
+			m_t = "2";
+			id = "1";
+			var m = id == "1" ? m1 : m2;
+			
+			replaceNulls(id);
+			document.getElementById("linha_amount_" + id).value = 1;
+			document.getElementById("coluna_amount_" + id).value = 1;
+			alterTable(id);
+			
+			var valA = parseFloat(document.getElementById("escala_val").value);
+			var _00 = document.getElementById("t_" + id + "_" + 0 + "_" + 0);
+			_00.value = valA;
+			
+			UpdateDrawInfo();
+			multE();
+			
+			break;
+	}
+}
+
+function degToRag(d)
+{
+	return d * (Math.PI/180);
+}
 
 function sum()
 {
@@ -303,7 +498,7 @@ function mult()
 				{
 					var a = document.getElementById("t_1_" + i + "_" + j);
 					var b = document.getElementById("t_2_" + j + "_" + z);
-					sum += parseInt(a.value) * parseInt(b.value);
+					sum += parseFloat(a.value) * parseFloat(b.value);
 				}
 				document.getElementById("t_3_" + i + "_" + z).value = sum;
 			}
@@ -645,7 +840,15 @@ function err(str)
 {
 	//error
 	console.log(str);
-	document.getElementById("err").innerText = str;
+	
+	var _err = document.getElementById("err");
+	if(str.trim(" ") == "")
+		_err.style.display = "none";
+	else
+	{
+		_err.style.display = "";
+		_err.innerText = str;
+	}
 }
 
 //Substitui todos os campos vazios por 0
@@ -989,7 +1192,7 @@ function DrawMatrix(id, color, update)
 		{
 			var _j = _matrix.height-1;
 			var lastPoint = new Point(parseInt(document.getElementById("t_" + id + "_" + 0 + "_" + _j).value),parseInt(document.getElementById("t_" + id + "_" + 1 + "_" + _j).value));
-			for(var j=0; j<m1.height; j++)
+			for(var j=0; j<_matrix.height; j++)
 			{
 				var x = parseInt(document.getElementById("t_" + id + "_" + 0 + "_" + j).value);
 				var y = parseInt(document.getElementById("t_" + id + "_" + 1 + "_" + j).value);
