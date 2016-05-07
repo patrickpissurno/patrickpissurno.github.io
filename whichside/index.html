@@ -23,12 +23,47 @@
             color:#FFF;
         }
     </style>
+    <script>
+          var tag = document.createElement('script');
+
+          tag.src = "https://www.youtube.com/iframe_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+          var player;
+          function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '399',
+                width: '710',
+                videoId: 'x94IWOXKeFQ',
+                playerVars:{
+                    autoplay:1,
+                    showinfo:0,
+                    controls:0
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+          }
+
+          function onPlayerReady(event) {
+            event.target.playVideo();
+          }
+        
+          function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.ENDED) {
+                document.getElementById("player").parentNode.removeChild(document.getElementById("player"));
+            }
+          }
+    </script>
     <body style="background-color:#208FCB;">
         <center>
             <img src="content/header.png" style="height:40%">
             <div style="height:1px;width:100%;background-color:#FFF;display:inline-block;"></div>
             <div class="div-box" style="margin-top:-1;background-color:#096799;">
-                <iframe src="https://www.youtube.com/embed/x94IWOXKeFQ?autoplay=1&loop=1&showinfo=0&controls=0" style="width:710;height:400;" frameborder="0" allowfullscreen></iframe>
+            <div id="player"></div>
             </div>
             <div style="width:80%;background-color:#FFF;display:inline-block;color:#208FCB"><h1>Download now</h1></div><br>
             <div class="div-box">
