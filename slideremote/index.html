@@ -1,155 +1,628 @@
-<!DOCTYPE HTML>
-<!--
-	Alpha by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
-		<title>Patrick Pissurno - Slide Remote</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/css/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie/v8.css" /><![endif]-->
-		<!--[if lte IE 8]><script src="assets/css/ie/respond.min.js"></script><![endif]-->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Slide Remote</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Slide Remote is an app that let's you easily remote control your presentations" />
+	<meta name="keywords" content="slide, remote, ppt, prezi, controller, app, ios, android, qr" />
+	<meta name="author" content="Patrick Pissurno" />
+    
+
+  <!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FREEHTML5.CO
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="Slide Remote"/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="http://patrickpissurno.com.br/slideremote"/>
+	<meta property="og:site_name" content="Slide Remote"/>
+	<meta property="og:description" content="Slide Remote is an app that let's you easily remote control your presentations"/>
+	<meta name="twitter:title" content="Slide Remote" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="http://patrickpissurno.com.br/slideremote" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel='shortcut icon' href='images/logo.png' />
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="css/simple-line-icons.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- 
+	Default Theme Style 
+	You can change the style.css (default color purple) to one of these styles
+	
+	1. pink.css
+	2. blue.css
+	3. turquoise.css
+	4. orange.css
+	5. lightblue.css
+	6. brown.css
+	7. green.css
+
+	-->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
 	</head>
 	<body>
-		<div id="page-wrapper">
+	<header role="banner" id="fh5co-header">
+			<div class="container">
+				<!-- <div class="row"> -->
+			    <nav class="navbar navbar-default">
+		        <div class="navbar-header">
+		        	<!-- Mobile Toggle Menu Button -->
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+                    <img class="pull-left" src="images/logo.png" style="width:50px;height:50px;margin-right:10px;margin-top:10px"><a class="navbar-brand" href="index.html">Slide Remote</a> 
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav navbar-right">
+		            <li class="active"><a href="#" data-nav-section="home"><span>
+                        <span class="lang-en keepInline">Home</span>
+                        <span class="lang-br keepInline">Início</span>
+                        </span></a></li>
+		            <li><a href="#" data-nav-section="features"><span>
+                        <span class="lang-en keepInline">Features</span>
+                        <span class="lang-br keepInline">Funções</span>
+                        </span></a></li>
+		            <li><a href="#" data-nav-section="testimonials"><span>
+                        <span class="lang-en keepInline">Testimonials</span>
+                        <span class="lang-br keepInline">Depoimentos</span>
+                        </span></a></li>
+		            <li><a href="#" data-nav-section="pricing"><span>
+                        <span class="lang-en keepInline">Download</span>
+                        <span class="lang-br keepInline">Baixe agora</span>
+                        </span></a></li>
+		            <li><a href="#" data-nav-section="press"><span>
+                        <span class="lang-en keepInline">Support</span>
+                        <span class="lang-br keepInline">Ajuda</span>
+                        </span></a></li>
+		          </ul>
+		        </div>
+			    </nav>
+			  <!-- </div> -->
+		  </div>
+	</header>
 
-			<!-- Header -->
-				<header id="header">
-					<h1><a href="../index.html">Patrick Pissurno</a>'s Website</h1>
-					<nav id="nav">
-						<ul>
-							<li><a class="lang-en" href="../index.html">Home</a>
-								<a class="lang-br" href="../index.html">Início</a></li>
-							<li>
-								<a class="lang-en">About me</a><a class="lang-br">Sobre mim</a>
-								<ul>
-									<li><a href="../portfolio.html" class="lang-en">Portfolio</a>
-										<a href="../portfolio.html" class="lang-br">Portfólio</a></li>
-									<li><a href="../curriculum_en-us.pdf" target="_blank" class = "lang-en">Curriculum</a>
-										<a href="../curriculum_pt-br.pdf" target="_blank" class = "lang-br">Currículo</a></li>
-								</ul>
-							</li>
-							<li><a class="lang-en" href="../games/support.html">Support</a>
-								<a class="lang-br" href="../games/support.html">Suporte</a></li>
-							<li><a href="https://github.com/patrickpissurno" class="button">GitHub</a></li>
-						</ul>
-					</nav>
-				</header>
+	<div id="slider" data-section="home">
+		<div class="owl-carousel owl-carousel-fullwidth">
+			<!-- You may change the background color here. -->
+		    <div class="item" style="background: #4e095a">
+		    	<div class="container" style="position: relative;">
+		    		<div class="row">
+					    <div class="col-md-7 col-sm-7">
+			    			<div class="fh5co-owl-text-wrap">
+						    	<div class="fh5co-owl-text">
+						    		<h1 class="fh5co-lead to-animate">
+                                        <span class="lang-en keepInline">Easy to use</span>
+                                        <span class="lang-br keepInline">Fácil de usar</span>
+                                    </h1>
+									<h2 class="fh5co-sub-lead to-animate">
+                                        <span class="lang-en keepInline">Just download the Windows app and scan its code. It's really easy!</span>
+                                        <span class="lang-br keepInline">Basta baixar o app para Windows e escanear o código. Fácil assim!</span>
+                                    </h2>
+									<p class="to-animate-2"><a data-nav-section="pricing" href="#" class="btn btn-primary btn-lg"><span class="fa fa-download"></span> <span class="lang-en keepInline">Download</span><span class="lang-br keepInline">Baixar</span></a></p>
+						    	</div>
+						    </div>
+					    </div>
+					    <div class="col-md-4 col-md-push-1 col-sm-4 col-sm-push-1 iphone-image">
+					    	<div class="iphone to-animate-2">
+                                <span class="lang-en keepInline">
+                                    <img src="images/iphone-2.png" alt="Slide Remote &copy; Patrick Pissurno">
+                                </span>
+                                <span class="lang-br keepInline">
+                                    <img src="images/iphone-2-br.png" alt="Slide Remote &copy; Patrick Pissurno">
+                                </span>
+                            </div>
+					    </div>
 
-			<!-- Main -->
-				<section id="main" class="container">
-					<header>
-						<h2>Slide Remote</h2>
-						<p><a class="lang-en withoutLink">Slide Remote is an app that let's you easily remote control your presentations</a>
-						<a class="lang-br withoutLink">Slide Remote é um app que te permite controlar apresentações de slide facilmente.</a></p>
-					</header>
-					<div class="box">
-						<span class="image featured"><img src="../images/slideremote/banner.png" alt="" />
-							<div style="margin-left:auto;margin-right:auto;text-align:right;">
-								<a href='http://www.freepik.com/free-vector/entrepreneur-in-a-presentation_789905.htm'>Designed by Freepik</a>
-							</div>
-						</span>
-						
-						<h3 class="lang-en">Why is it so amazing?</h3>
-						<p class="lang-en">
-						You can control any presentation software you want: Prezi, Microsoft PowerPoint, Slideshare and many more!<br>
-						<br>
-						And the best:<br>
-						- No registration required!<br>
-						- No ads!<br>
-						- Plug and play Windows app!<br>
-						- Unlimited usage!<br>
-						- High performance!<br>
-						- Works with proxies without any additional effort!<br>
-						- Control multiple computers with a single device!<br>
-						- Pretty looking material design interface!<br>
-						<br>
-						</p>
-						
-						<h3 class="lang-br">Por que é tão incrível?</h3>
-						<p class="lang-br">
-						Dá para controlar qualquer software que você queira: Prezi, Microsoft PowerPoint, Slideshare vários outros!<br>
-						<br>
-						E o melhor:<br>
-						- Sem registros!<br>
-						- Sem propagandas!<br>
-						- App Plug and Play de Windows!<br>
-						- Uso ilimitado!<br>
-						- Alta performance!<br>
-						- Funciona com proxies sem esforço adicional!<br>
-						- Controle multiplos computadores com um único smartphone!<br>
-						- Interface Material Design!<br>
-						<br>
-						</p>
-						
-						<center>
-						<h3 class="lang-en">Screenshots</h3>
-						<h3 class="lang-br">Galeria</h3>
-						<!--<table>
-							<tr>
-								<td>
-									<img src="../images/slideremote/print1.png" alt="" class="image fit" style="width:100%;height:33%;"/>
-								</td>
-								<td>
-									<img src="../images/slideremote/print2.png" alt="" class="image fit" style="width:100%;height:33%;"/>
-								</td>
-								<td>
-									<img src="../images/slideremote/print3.png" alt="" class="image fit" style="width:100%;height:33%;"/>
-								</td>
-							</tr>
-						</table>
-						</center>-->
-						<center>
-							<canvas id="slider" class="slider" name="../images/slideremote/slideshow">
-									<p class="lang-en">Your browser does not support canvas.</p>
-									<p class="lang-br">Seu navegador não suporta canvas.</p>
-							</canvas>
-							<br><br>
-							<div class="lang-en">
-								<h3>Downloads</h3>
-								<a href = "../slideremote/SlideRemote.exe" class = "button icon fa-download">Windows App</a>
-								&nbsp&nbsp
-								<a href = "https://play.google.com/store/apps/details?id=com.patrickpissurno.slideremote" target="_blank" class = "button icon fa-download">Android App</a>
-							</div>
-							<div class="lang-br">
-								<h3>Downloads</h3>
-								<a href = "../slideremote/SlideRemote.exe" class = "button icon fa-download">App para Windows</a>
-								&nbsp&nbsp
-								<a href = "https://play.google.com/store/apps/details?id=com.patrickpissurno.slideremote" target="_blank" class = "button icon fa-download">App para Android</a>
-							</div>
-						</center>
-					</div>
-				</section>
+		    		</div>
+		    	</div>
+		    </div>
+			<!-- You may change the background color here.  -->
+		    <div class="item" style="background: #7B1FA2;">
+		    	<div class="container" style="position: relative;">
+		    		<div class="row">
+		    			<div class="col-md-7 col-md-push-1 col-md-push-5 col-sm-7 col-sm-push-1 col-sm-push-5">
+			    			<div class="fh5co-owl-text-wrap">
+						    	<div class="fh5co-owl-text">
+						    		<h1 class="fh5co-lead to-animate">
+                                        <span class="lang-en keepInline">Clean design</span>
+                                        <span class="lang-br keepInline">Design clean</span>
+                                    </h1>
+									<h2 class="fh5co-sub-lead to-animate">
+                                        <span class="lang-en keepInline">Pretty looking exclusive interface for each platform, following Google's&copy; and Apple's&copy; guidelines</span>
+                                        <span class="lang-br keepInline">Linda interface exclusiva para cada plataforma, seguindo os designs da Google&copy; e da Apple&copy;</span>
+                                    </h2>
+									<p class="to-animate-2"><a data-nav-section="pricing" href="#" class="btn btn-white btn-lg"><span class="fa fa-download"></span> <span class="lang-en keepInline">Download</span><span class="lang-br keepInline">Baixar</span></a></p>
+						    	</div>
+						    </div>
+					    </div>
+					    <div class="col-md-4 col-md-pull-7 col-sm-4 col-sm-pull-7 iphone-image">
+					    	<div class="iphone to-animate-2">
+                                <span class="lang-en keepInline"><img src="images/iphone-1.png" alt="Slide Remote &copy; Patrick Pissurno"></span>
+                                <span class="lang-br keepInline"><img src="images/iphone-1-br.png" alt="Slide Remote &copy; Patrick Pissurno"></span>
+                            </div>
+					    </div>
 
-			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<!--<li><a href="http://www.facebook.com/patrickpissurno.pessoal" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>-->
-						<li><a href="http://www.facebook.com/patrickpissurno.pessoal" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<!--<li><a href="http://www.instagram.com/coisadepro" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>-->
-						<li><a href="http://www.github.com/patrickpissurno" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="https://plus.google.com/u/0/108767828621632244898/" target="_blank" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Patrick Pissurno. <a class="lang-en keepInline">All rights reserved.</a> <a class="lang-br keepInline">Todos os direitos reservados.</a> </li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li><a href="#" onclick="ChangeLang('br');" class="lang-en">Ver em Português</a><a href="#" onclick="ChangeLang('en');" class="lang-br">Show in English</a></li>
-					</ul>
-				</footer>
+		    		</div>
+		    	</div>
+		    </div>
+            <div style="background:#4e095a">
+                <div class="item to-animate-2 iphone" style="background-image: url(images/img-bg.png)">
+                    <div class="container" style="position: relative;">
+                        <div class="row">
+                            <div class="col-md-7 col-sm-7">
+                                <div class="fh5co-owl-text-wrap">
+                                    <div class="fh5co-owl-text">
+                                        <h1 class="fh5co-lead to-animate">
+                                            <span class="lang-en keepInline">Control for everyone</span>
+                                            <span class="lang-br keepInline">Controle para todos</span>
+                                        </h1>
+                                        <h2 class="fh5co-sub-lead to-animate">
+                                            <span class="lang-en keepInline">Multiple controllers at the same time, for all your team members! No extra work!</span>
+                                            <span class="lang-br keepInline">Vários controles ao mesmo tempo, para toda a sua equipe! Sem trabalho extra!</span>
+                                        </h2>
+                                        <p class="to-animate-2"><a data-nav-section="pricing" href="#" class="btn btn-primary btn-lg"><span class="fa fa-download"></span> <span class="lang-en keepInline">Download</span><span class="lang-br keepInline">Baixar</span></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-md-push-1 col-sm-4 col-sm-push-1 iphone-image">
+                                <div class="iphone to-animate-2">
+                                    <span class="lang-en keepInline"><img src="images/iphone-4.png" alt="Slide Remote &copy; Patrick Pissurno"></span>
+                                    <span class="lang-br keepInline"><img src="images/iphone-4-br.png" alt="Slide Remote &copy; Patrick Pissurno"></span>
+                                </div>
+                            </div>
 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item" style="background: #7B1FA2;">
+		    	<div class="container" style="position: relative;">
+		    		<div class="row">
+		    			<div class="col-md-7 col-md-push-1 col-md-push-5 col-sm-7 col-sm-push-1 col-sm-push-5">
+			    			<div class="fh5co-owl-text-wrap">
+						    	<div class="fh5co-owl-text">
+						    		<h1 class="fh5co-lead to-animate">
+                                        <span class="lang-en keepInline">Works with everything</span>
+                                        <span class="lang-br keepInline">Funciona com tudo</span>
+                                    </h1>
+									<h2 class="fh5co-sub-lead to-animate">
+                                        <span class="lang-en keepInline">Fully compatible with Prezi&copy;, Microsoft PowerPoint&copy;, Google Presentation&copy;, and many more. An universal remote for all your needs.</span>
+                                        <span class="lang-br keepInline">Totalmente compatível com Prezi&copy;, Microsoft PowerPoint&copy;, Google Apresentações&copy; e vários outros. Um controle universal para todos as horas.</span>
+                                    </h2>
+                                    <p class="to-animate-2"><a data-nav-section="pricing" href="#" class="btn btn-white btn-lg"><span class="fa fa-download"></span> <span class="lang-en keepInline">Download</span><span class="lang-br keepInline">Baixar</span></a></p>
+						    	</div>
+						    </div>
+					    </div>
+					    <div class="col-md-4 col-md-pull-7 col-sm-4 col-sm-pull-7 iphone-image">
+					    	<div class="iphone to-animate-2">
+                                <span class="lang-en keepInline"><img src="images/iphone-3.png" alt="Slide Remote &copy; Patrick Pissurno"></span>
+                                <span class="lang-br keepInline"><img src="images/iphone-3-br.png" alt="Slide Remote &copy; Patrick Pissurno"></span>
+                            </div>
+					    </div>
+
+		    		</div>
+		    	</div>
+		    </div>
 		</div>
+	</div>
+	
+	<div id="fh5co-features" data-section="features">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="single-animate animate-features-1">
+                        <span class="lang-en keepInline">Features</span>
+                        <span class="lang-br keepInline">Destaques</span>
+                    </h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 single-animate animate-features-2">
+							<h3>
+                                <span class="lang-en keepInline">Be the star! Your boss and co-workers will be impressed with your presentation!</span>
+                                <span class="lang-br keepInline">Seja a estrela! Seu chefe e seus amigos vão se impressionar com a sua apresentação</span>
+                            </h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row row-bottom-padded-sm">
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+					<div class="fh5co-icon"><i class="icon-present"></i></div>
+					<div class="fh5co-desc">
+						<h3>
+                            <span class="lang-en keepInline">Free!</span>
+                            <span class="lang-br keepInline">Grátis!</span>
+                        </h3>
+						<p>
+                            <span class="lang-en keepInline">You don't need to pay anything to use it, that way, everybody can use it!</span>
+                            <span class="lang-br keepInline">Não precisa pagar nada! Não tem mais desculpa para não usar :D</span>
+                        </p>
+					</div>	
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+					<div class="fh5co-icon"><i class="icon-heart"></i></div>
+					<div class="fh5co-desc">
+						<h3>
+                            <span class="lang-en keepInline">Clean design</span>
+                            <span class="lang-br keepInline">Design clean</span>
+                        </h3>
+						<p>
+                            <span class="lang-en keepInline">Pretty looking exclusive interface for each platform, following Google's and Apple's guidelines.</span>
+                            <span class="lang-br keepInline">Linda interface exclusiva para cada plataforma, seguindo os padrões da Google e da Apple.</span>
+                        </p>
+					</div>
+				</div>
+				<div class="clearfix visible-sm-block visible-xs-block"></div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+					<div class="fh5co-icon"><i class="icon-star"></i></div>
+					<div class="fh5co-desc">
+						<h3>
+                            <span class="lang-en keepInline">Easy and blazing fast</span>
+                            <span class="lang-br keepInline">Fácil e ultra rápido</span>
+                        </h3>
+						<p>
+                            <span class="lang-en keepInline">There is no setup. Take control in less than 5 seconds! Just scan the code with your phone and you're ready to go.</span>
+                            <span class="lang-br keepInline">Não tem instalador. Assuma o controle em menos de 5 segundos! Basta escanear o código com o seu celular e usar!</span>
+                        </p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+					<div class="fh5co-icon"><i class="icon-speedometer"></i></div>
+					<div class="fh5co-desc">
+                        <h3>
+                            <span class="lang-en keepInline">Lightweight and powerful</span>
+                            <span class="lang-br keepInline">Leve e potente</span>
+                        </h3>
+						<p>
+                            <span class="lang-en keepInline">Storage isn't a problem anymore and you have 99.9% uptime and speed thanks to our new Cloud-based servers.</span> <span class="lang-br keepInline">Espaço não é mais um problema e o app não te deixa na mão graças aos nossos novos servidores em nuvem.</span>
+                        </p>
+					</div>	
+				</div>
+				<div class="clearfix visible-sm-block visible-xs-block"></div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+					<div class="fh5co-icon"><i class="icon-eye"></i></div>
+					<div class="fh5co-desc">
+						<h3>
+                            <span class="lang-en keepInline">Laser Pointer</span>
+                            <span class="lang-br keepInline">Laser virtual</span>
+                        </h3>
+						<p>
+                            <span class="lang-en keepInline">Now you can use a virtual pointer to highlight something on the screen.</span>
+                            <span class="lang-br keepInline">Agora você pode usar um laser virtual para destacar algo na tela.</span>
+                        </p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+					<div class="fh5co-icon"><i class="icon-umbrella"></i></div>
+					<div class="fh5co-desc">
+						<h3>
+                            <span class="lang-en keepInline">Works with everything</span>
+                            <span class="lang-br keepInline">Funciona com tudo</span>
+                        </h3>
+						<p>
+                            <span class="lang-en keepInline">Fully compatible with Prezi&copy;, Microsoft PowerPoint&copy;, Google Presentation&copy;, and many more. An universal remote for all your needs.</span>
+                            <span class="lang-br keepInline">Totalmente compatível com Prezi&copy;, Microsoft PowerPoint&copy;, Google Apresentações&copy; e muitos outros. Um controle universal para todos os momentos.</span>
+                        </p>
+					</div>
+				</div>
+				<div class="clearfix visible-sm-block visible-xs-block"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4 single-animate animate-features-3">
+					<a href="#" class="btn btn-primary btn-block">
+                                <span class="lang-en keepInline">Learn more</span>
+                                <span class="lang-br keepInline">Saiba mais</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
 
-		<!-- Scripts -->
-			<script src="../assets/js/lang.js"></script>
-			<script src="../assets/js/slider.js"></script>
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/jquery.dropotron.min.js"></script>
-			<script src="../assets/js/jquery.scrollgress.min.js"></script>
-			<script src="../assets/js/skel.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
+	<div id="fh5co-testimonials" data-section="testimonials">		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">
+                        <span class="lang-en keepInline">Happy Clients Says...</span>
+                        <span class="lang-br keepInline">Opinião de quem usa</span>
+                    </h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext to-animate">
+                            <h3>
+                                <span class="lang-en keepInline">Everybody who gave a try fell in love. What are you waiting for?</span>
+                                <span class="lang-br keepInline">Todos que testaram se apaixonaram. O que você está esperando?</span>
+                            </h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="box-testimony to-animate">
+						<blockquote>
+							<span class="quote"><span><i class="icon-quote-left"></i></span></span>
+							<p>&ldquo;
+                                <span class="lang-en keepInline">Works as it should! I use and recommend! Requires no installation on PC. It's a self-executable. Very cool!</span>
+                                <span class="lang-br keepInline">Cumpre o que promete! Uso e recomendo! Não precisa de instalação no PC. É um auto-executável. Muito bom!</span>&rdquo;</p>
+						</blockquote>
+						<p class="author">Valnei Santos Lima <span class="subtext">Galaxy S2, Android 4.1</span></p>
+					</div>
+					
+				</div>
+				<div class="col-md-4">
+					<div class="box-testimony to-animate">
+						<blockquote>
+							<span class="quote"><span><i class="icon-quote-left"></i></span></span>
+							<p>&ldquo;
+                                <span class="lang-en keepInline">Easy and amazing! This is easier than the official [Microsoft] Office or Prezi Remote because [you] can take it wherever and you don't need bluetooth</span>
+                                <span class="lang-br keepInline">Fácil e surpreendente! Esse app é melhor do que os oficiais [Microsoft] Office ou Prezi Remote, por que [você] pode levar para onde quiser e não precisa de bluetooth</span>
+                                &rdquo;</p>
+						</blockquote>
+						<p class="author">Danindu Marasinghe <span class="subtext">Huawei Y6, Android 5.1</span></p>
+					</div>
+					
+					
+				</div>
+				<div class="col-md-4">
+					<div class="box-testimony to-animate">
+						<blockquote>
+							<span class="quote"><span><i class="icon-quote-left"></i></span></span>
+							<p>&ldquo;
+                                <span class="lang-en keepInline">Awesome! Love this!</span>
+                                <span class="lang-br keepInline">Incrível! Amei!</span>
+                                &rdquo;</p>
+						</blockquote>
+						<p class="author">Ferdinand Tobias <span class="subtext">Galaxy Tab 2, Android 4.1</span></p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-pricing" data-section="pricing">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="single-animate animate-pricing-1">
+                        <span class="lang-en keepInline">Download</span>
+                        <span class="lang-br keepInline">Baixe agora</span>
+                    </h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext single-animate animate-pricing-2">
+							<h3>
+                                <span class="lang-en keepInline">Start using the app in less than 3 minutes</span>
+                                <span class="lang-br keepInline">Comece a usar o app em menos de 3 minutos</span>
+                            </h3>
+                            <p>
+                                <span class="lang-en keepInline">You just need to download one app for each device type</span>
+                                <span class="lang-br keepInline">Você só precisa baixar um para cada tipo de dispositivo</span>
+                            </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+                <center>
+					<div class="to-animate col-md-6 col-md-offset-3">
+                        <table class="table text-center">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">
+                                        <span class="lang-en keepInline">Computer</span>
+                                        <span class="lang-br keepInline">Computador</span>
+                                    </th>
+                                    <th class="text-center">
+                                        <span class="lang-en keepInline">Mobile</span>
+                                        <span class="lang-br keepInline">Telefone</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="http://patrickpissurno.com.br/slideremote/SlideRemote.exe" target="_blank" class="btn btn-primary"><span class="fa fa-download"></span>
+                                        <span class="lang-en keepInline">Windows App</span>
+                                        <span class="lang-br keepInline">App para Windows</span>
+                                        </a></td>
+                                    <td><a href="https://play.google.com/store/apps/details?id=com.patrickpissurno.slideremote" target="_blank" class="btn btn-primary"><span class="fa fa-download"></span>
+                                        <span class="lang-en keepInline">Android App</span>
+                                        <span class="lang-br keepInline">App para Android</span>
+                                        </a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+					</div>
+                </center>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-press" data-section="press">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="single-animate animate-press-1">
+                        <span class="lang-en keepInline">User Support</span>
+                        <span class="lang-br keepInline">Suporte de usuário</span>
+                    </h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext single-animate animate-press-2">
+                            <h3>
+                                <span class="lang-en keepInline">Before contacting me by e-mail check the following</span>
+                                <span class="lang-br keepInline">Antes de entrar em contato por e-mail verifique o seguinte</span>
+                            </h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<!-- Press Item -->
+                    <div class="fh5co-press-item to-animate">
+						<div class="fh5co-press-img" style="background-image: url(http://i.imgur.com/AmMhTht.jpg);background-position: center;">
+						</div>
+						<div class="fh5co-press-text">
+                            <h3 class="h2 fh5co-press-title">
+                                <span class="lang-en keepInline">System Requirements</span>
+                                <span class="lang-br keepInline">Requesitos de Sistema</span> <span class="fh5co-border"></span></h3>
+                            <p>
+                                <span class="lang-en keepInline">Check if your smartphone/computer meets all the System Requirements.</span>
+                                <span class="lang-br keepInline">Verifique se seu telefone/computador cumprem todos os requesitos de sistema</span>
+                            </p>
+							<p><a href="#" class="btn btn-primary btn-sm">
+                                <span class="lang-en keepInline">Learn more</span>
+                                <span class="lang-br keepInline">Saiba mais</span></a></p>
+						</div>
+					</div>
+					<!-- Press Item -->
+				</div>
+
+				<div class="col-md-6">
+					<!-- Press Item -->
+                    <div class="fh5co-press-item to-animate">
+						<div class="fh5co-press-img" style="background-image: url(http://i.imgur.com/lo1FYZP.jpg);background-position: center;">
+						</div>
+						<div class="fh5co-press-text">
+							<h3 class="h2 fh5co-press-title">Internet <span class="fh5co-border"></span></h3>
+                            <p>
+                                <span class="lang-en keepInline">Double check if both devices are connected to the internet and if you can access other websites.</span>
+                                <span class="lang-br keepInline">Verifique duas veze se ambos dispositivos estão conectados à internet e conseguem acessar outros sites</span>
+                            </p>
+							<p><a href="#" class="btn btn-primary btn-sm">
+                                <span class="lang-en keepInline">Learn more</span>
+                                <span class="lang-br keepInline">Saiba mais</span></a></p>
+						</div>
+					</div>
+					<!-- Press Item -->
+				</div>
+				
+				<div class="col-md-6">
+					<!-- Press Item -->
+					<div class="fh5co-press-item to-animate">
+						<div class="fh5co-press-img" style="background-image: url(http://i.imgur.com/tGi6LMj.png);background-position: center;">
+						</div>
+						<div class="fh5co-press-text">
+                            <h3 class="h2 fh5co-press-title">
+                                <span class="lang-en keepInline">Reinstall</span>
+                                <span class="lang-br keepInline">Reinstale</span> <span class="fh5co-border"></span></h3>
+                            <p>
+                                <span class="lang-en keepInline">Uninstall the app and try downloading it again. Also, check if you anti-virus is blocking the connection.</span>
+                                <span class="lang-br keepInline">Desinstale o app e tente baixar novamente. Além disso, verifique se seu anti-virus não está bloqueando a conexão</span>
+                            </p>
+							<p><a href="#" class="btn btn-primary btn-sm">
+                                <span class="lang-en keepInline">Learn more</span>
+                                <span class="lang-br keepInline">Saiba mais</span></a></p>
+						</div>
+					</div>
+					<!-- Press Item -->
+				</div>
+
+				<div class="col-md-6">
+					<!-- Press Item -->                    
+                    <div class="fh5co-press-item to-animate">
+						<div class="fh5co-press-img" style="background-image: url(http://i.imgur.com/Vv8k05f.jpg);background-position: center;">
+						</div>
+						<div class="fh5co-press-text">
+                            <h3 class="h2 fh5co-press-title">
+                                <span class="lang-en keepInline">Contact me</span>
+                                <span class="lang-br keepInline">Entre em contato</span> <span class="fh5co-border"></span>
+                            </h3>
+                            <p>
+                                <span class="lang-en keepInline">If the problem persists, get in touch with me at <a href="mailto:contato@patrickpissurno.com.br">contato@patrickpissurno.com.br</a>. I'll try to solve it as fast as possible.</span>
+                                <span class="lang-br keepInline">Se o problema persistir, mande um email para <a href="mailto:contato@patrickpissurno.com.br">contato@patrickpissurno.com.br</a>. Tentarei resolver o mais rápido possível.</span>
+                            </p>
+                            <p><a href="#" class="btn btn-primary btn-sm">
+                                <span class="lang-en keepInline">Learn more</span>
+                                <span class="lang-br keepInline">Saiba mais</span>
+                                </a></p>
+						</div>
+					</div>
+					<!-- Press Item -->
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+
+	<footer id="footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-bottom-padded-sm">
+				<div class="col-md-12">
+					<p class="copyright text-center">&copy; 2015-2016 <a href="index.html">Slide Remote</a> by <a href="http://patrickpissurno.com.br">Patrick Pissurno</a>. 
+                        <span class="lang-en keepInline">All Rights Reserved.</span>
+                        <span class="lang-br keepInline">Todos os direitos reservados.</span>
+                        <br>Website model designed by <a href="http://freehtml5.co/" target="_blank">FREEHTML5</a> | 
+                        <a href="javascript:void(0)" onclick="ChangeLang('br');" class="lang-en keepInline">Ver em Português</a>
+                        <a href="javascript:void(0)" onclick="ChangeLang('en');" class="lang-br keepInline">Show in English</a>
+                    </p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="social social-circle">
+						<li><a href="https://www.facebook.com/SlideRemoteApp/" target="_blank"><i class="icon-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/SlideRemote" target="_blank"><i class="icon-twitter"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+    <script src="js/lang.js"></script>
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Owl Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+
+	<!-- End demo purposes only -->
+
+	<!-- Main JS (Do not remove) -->
+	<script src="js/main.js"></script>
 
 	</body>
 </html>
