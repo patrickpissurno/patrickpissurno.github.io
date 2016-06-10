@@ -4,6 +4,10 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+var host = "patrickpissurno.com.br";
+if ((host == window.location.host) && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+
 (function($) {
 
 	skel.breakpoints({
