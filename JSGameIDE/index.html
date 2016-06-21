@@ -9,7 +9,10 @@
         <script>
         var host = "patrickpissurno.com.br";
         if ((host == window.location.host) && (window.location.protocol != "https:"))
+        {
+            window.stop();
             window.location.protocol = "https";
+        }
         </script>
 		<title>JSGameIDE</title>
 		<meta charset="utf-8" />

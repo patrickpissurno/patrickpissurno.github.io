@@ -8,7 +8,10 @@
     <script>
     var host = "patrickpissurno.com.br";
     if ((host == window.location.host) && (window.location.protocol != "https:"))
-        window.location.protocol = "https";    
+    {
+        window.stop();
+        window.location.protocol = "https";
+    }  
     </script>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
