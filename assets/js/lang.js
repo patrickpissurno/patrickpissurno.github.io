@@ -1,4 +1,4 @@
-language = "en";
+language = "br";
 var lang = localStorage.getItem("lang");
 if(lang != null)
 	language = lang;
