@@ -2,6 +2,7 @@ language = "br";
 var lang = localStorage.getItem("lang");
 if(lang != null)
 	language = lang;
+localStorage.setItem("lang", language);
 UpdatePage();
 
 function UpdatePage()
