@@ -4,6 +4,10 @@ if(lang != null)
 	language = lang;
 localStorage.setItem("lang", language);
 UpdatePage();
+setTimeout(function(){UpdatePage();}, 50);
+setTimeout(function(){UpdatePage();}, 100);
+setTimeout(function(){UpdatePage();}, 150);
+setTimeout(function(){UpdatePage();}, 500);
 
 function UpdatePage()
 {

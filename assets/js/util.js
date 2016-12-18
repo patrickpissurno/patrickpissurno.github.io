@@ -17,7 +17,7 @@
 				href = $this.attr('href'),
 				target = $this.attr('target');
 				//DEBUG
-			if($this.attr('class').indexOf("lang") >= 0)
+			if($this.attr('class') !== undefined && $this.attr('class').indexOf("lang") >= 0)
 				var class_add = $this.attr('class').substr($this.attr('class').indexOf("lang"),7);
 			else
 				var class_add = "";
