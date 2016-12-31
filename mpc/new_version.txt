@@ -1,1 +1,1 @@
-false;https://play.google.com/store/apps/details?id=com.bombaapps.funk2017;http://i.imgur.com/mAXFkBg.jpg
+true;https://play.google.com/store/apps/details?id=com.bombaapps.funk2017;http://i.imgur.com/mAXFkBg.jpg
