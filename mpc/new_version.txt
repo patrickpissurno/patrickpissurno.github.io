@@ -1,1 +1,1 @@
-false;https://play.google.com/store/apps/details?id=com.patrickpissurno.mpcfunkdj&hl=pt_BR;https://patrickpissurno.com.br/mpc/new_version.jpg
+false;https://play.google.com/store/apps/details?id=com.bombaapps.funk2017;http://i.imgur.com/mAXFkBg.jpg
