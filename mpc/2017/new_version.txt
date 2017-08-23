@@ -1,1 +1,1 @@
-true;https://play.google.com/store/apps/details?id=com.bombaapps.fotofunk;http://i.imgur.com/pTNVAnn.jpg
+false;https://play.google.com/store/apps/details?id=com.bombaapps.fotofunk;http://i.imgur.com/pTNVAnn.jpg
