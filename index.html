@@ -1,17 +1,170 @@
-<HTML>
-	<head>
-		<title>
-			Patrick Pissurno
-		</title>
-	</head>
-	<body>
-		<center>
-			<h1>
-				Hello World
-			</h1>
-			<h4>
-				This is my first GitHub website test.
-			</h4>
-		</center>
-	</body>
-</HTML>
+<!doctype html>
+<html lang="br">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="/assets/main.css">
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
+
+        <title>Patrick Pissurno: soluções rápidas em desenvolvimento</title>
+        <meta name="description" content="Transforme sua ideia em produto rapidamente com Metodologia Enxuta aplicada ao desenvolvimento de soluções móveis, web e desktop">
+        
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@patrickpissurno">
+        <meta property="og:title" content="Soluções rápidas em desenvolvimento - Patrick Pissurno" />
+        <meta property="og:description" content="Transforme sua ideia em produto rapidamente com Metodologia Enxuta aplicada ao desenvolvimento de soluções móveis, web e desktop" />
+        <meta property="og:url" content="https://patrickpissurno.com.br/" />
+        <meta property="og:site_name" content="PatrickPissurno.com.br">
+        <meta property="og:image" content="https://patrickpissurno.com.br/assets/seo_default.png" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:type" content="website" />
+
+        <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png" />
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script>
+            var language = navigator.languages && navigator.languages[0] || navigator.language || navigator.userLanguage;
+            if(language.toLowerCase().indexOf('en') !== -1)
+                Swal.fire({
+                    title: 'Change language?',
+                    html: 'You are seeing this page in Portuguese, but <b>a version in English is also available</b>. Pick a language to continue.',
+                    icon: 'info',
+                    confirmButtonText: 'English',
+                    cancelButtonText: 'Português',
+                    showCancelButton: true,
+                    reverseButtons: true
+                }).then(function (res){
+                    if(res.value)
+                        location.href = 'https://pissurno.dev';
+                });
+        </script>
+    </head>
+    <body ontouchstart="">
+        <div class="content">
+            <div class="container-fluid header d-flex align-items-center justify-content-center">
+                <h1>Patrick Pissurno.</h1>
+            </div>
+            <div class="container-fluid header-description d-flex align-items-center justify-content-center">
+                <p>Especialista em prototipação enxuta de soluções móveis e plataformas</p>
+            </div>
+
+            <a href="https://genieapp.com.br/" target="_blank" class="no-decoration">
+                <div class="container item-heading">
+                    <h3>Featuring</h3>
+                    <h2>Genie App.</h2>
+                </div>
+                <div class="img-text container">
+                    <div class="d-flex align-items-center justify-content-center item-image-extra">
+                        <video class="item-img img-genie genie-thumb" data-src="/assets/genie.mp4"></video>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img class="item-img img-genie" src="/assets/genie.png"/>
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-title">Experiência</h3>
+                        <p><b>Solução completa</b> em desenvolvimento para a plataforma. Front-end em <b>Android nativo</b> e back-end em <b>Node.js</b>. Trabalho <b>remoto</b> para Startup na área de empregos.</p>
+                    </div>
+                </div>
+            </a>
+            <div class="container item-tags">
+                <p><b>Keywords:</b> Android, Node.js, Animações, Regex, MySQL, MongoDB, Transactional Email, Cloud, Push Notification, Git.</p>
+            </div>
+
+            <a href="https://homyfoodbr.com/" target="_blank" class="no-decoration">
+                <div class="container item-heading">
+                    <h3>Featuring</h3>
+                    <h2>Homy Food.</h2>
+                </div>
+                <div class="img-text container">
+                    <div class="d-flex align-items-center justify-content-center item-image-extra">
+                        <img class="item-img img-homyfood" data-src="/assets/homyfood_2.jpg"/>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img class="item-img img-homyfood" src="/assets/homyfood_1.jpg"/>
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-title">Experiência</h3>
+                        <p><b>Plataforma de ecommerce</b> desenvolvida como projeto pessoal. Front-end em <b>Android nativo</b> e Back-end em <b>Node.js</b>.<br>
+                    <br>Aplicativo <b>reativo</b> utilizando os mais recomendados <b>padrões de projeto</b>. Download e <b>upload de imagens</b> com <b>cache</b>. Alto nível de cuidado e <b>polimento</b>.<br>
+                    <br>O melhor da <b>metodologia ágil</b> e do <b>processo enxuto</b>.</p>
+                    </div>
+                </div>
+            </a>
+            <div class="container item-tags">
+                <p><b>Keywords:</b> Android, Node.js, Animações, RxJava2, Retrofit2, Glide, Tray, Compressor, Multer, Sharp, Mongoose, MySQL, Docker, Git, GitLab CI, Cloud, Push Notifications.</p>
+            </div>
+
+            <a href="https://patrickpissurno.com.br/slideremote/" target="_blank" class="no-decoration">
+                <div class="container item-heading">
+                    <h3>Featuring</h3>
+                    <h2>Slide Remote.</h2>
+                </div>
+                <div class="img-text container">
+                    <div class="d-flex align-items-center justify-content-center item-image-extra">
+                        <img class="item-img img-slideremote" data-src="/assets/slideremote_2.png"/>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img class="item-img img-slideremote" src="/assets/slideremote_1.png"/>
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-title">Experiência</h3>
+                        <p>App para <b>controle remoto</b> de apresentação de slides. Desenvolvido como <b>projeto pessoal</b> em <b>Android nativo</b> e <b>.NET Visual C#</b> com back-end em <b>PHP</b>.<br>
+                    <br>Infraestrutura em <b>nuvem</b> com <b>alta escalabilidade</b> e disponibilidade. Servidor funciona como <b>relay</b> entre o telefone e o computador.</p>
+                    </div>
+                </div>
+            </a>
+            <div class="container item-tags item-tags-last">
+                <p><b>Keywords:</b> Android, .NET C# WinForms, PHP, MySQL, Cloud, QR Code, Material Design, Git.</p>
+            </div>
+
+            <div class="container d-flex align-items-center justify-content-center">
+                <img class="talk-pic" src="/assets/me.png"/>
+            </div>
+            <div class="container item-info talk-info">
+                <h3 class="item-title">Entre em contato</h3>
+                <p>Chegou a vez do <b><u>seu produto</u></b> entrar nessa lista. Vamos <b>botar no ar</b>?</p>
+            </div>
+            <div class="container d-flex align-items-center justify-content-center">
+                <a href="tel:5521981215141"><div class="talk-cta">Vamos Lá</div></a>
+            </div>
+            <div class="container d-flex align-items-center justify-content-center talk-email">
+                <a href="mailto:me@patrickpissurno.com.br"><p>me@patrickpissurno.com.br</p></a>
+            </div>
+
+            <div class="container-fluid footer d-flex align-items-center justify-content-center">
+                <a href="https://patrickpissurno.com.br/curriculum_pt-br.pdf" target="_blank"><div class="footer-item"><i class="fas fa-file-alt"></i></div></a>
+                <a href="https://github.com/patrickpissurno" target="_blank"><div class="footer-item"><i class="fab fa-github"></i></div></a>
+                <a href="https://linkedin.com/in/patrickpissurno" target="_blank"><div class="footer-item"><i class="fab fa-linkedin"></i></div></a>
+            </div>
+        </div>
+
+        <div class="floating-button">
+            <a href="tel:5521981215141"><div class="footer-item floating-button-inner"><i class="fas fa-phone"></i></div></a>
+        </div>
+
+        
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+        <script src="/assets/main.js"></script>
+    </body>
+</html>

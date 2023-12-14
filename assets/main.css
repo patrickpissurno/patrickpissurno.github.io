@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+
+body {
+    background-color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+.content {
+    background-color:white;
+}
+
+.header {
+    background-color: #333;
+    height: 10rem;
+    color: white;
+}
+
+.header-description {
+    background-color: #3e87e0;
+    color: white;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.header-description>p {
+    margin: 0;
+    padding: 0;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    box-shadow: 0 0.1rem 1.5rem 0.1rem rgba(255, 45, 85, 0.35);
+    border-radius: 10000px;
+}
+
+.floating-button-inner {
+    /* color: #333!important; */
+    /* background: #00dffcff!important; */
+    color: #fff!important;
+    background: #ff2d55!important;
+    font-size: 2.5rem!important;
+    margin: 0!important;
+}
+
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-weight: 100;
+    margin-left: -1px;
+}
+
+.item-heading {
+    margin-bottom: 2rem;
+}
+
+.item-img {
+    margin-bottom: 2rem;
+    width:105%;
+    box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0, 0, 0, 0.37);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; 
+    -ms-transform: translateZ(0); /* IE 9 */
+    -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+    transform: translateZ(0);
+    image-rendering: -moz-crisp-edges;         
+    image-rendering:   -o-crisp-edges;         
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+.img-genie {
+    box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(87, 195, 176, 0.44)!important;
+}
+
+.img-homyfood {
+    box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(134, 30, 9, 0.212)!important;
+}
+
+.img-slideremote {
+    box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(123, 31, 162, 0.286)!important;
+}
+
+.item-info {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.item-info>p>b {
+    font-weight: 400;
+}
+
+.item-title {
+    margin-bottom: 0.5rem;
+}
+
+.item-tags {
+    background-color: #3e87e0;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+.item-tags>p {
+    padding: 0;
+    margin: 0;
+}
+.item-tags>p>b{
+    font-weight: 700;
+}
+
+.item-tags-last {
+    margin-bottom: 2rem;
+}
+
+.talk-pic{
+    width: 15rem;
+    margin-bottom: 1rem;
+}
+
+.talk-info {
+    margin-bottom: 2rem;
+}
+
+.talk-cta {
+    width: 14rem;
+    background-color: #3e87e0;
+    color:white;
+    border-radius: 1000px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.4rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0.8rem;
+    box-shadow: 0 0.1rem 1rem 0.1rem rgba(36, 102, 177, 0.57);
+    margin-bottom: 2rem;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    transition: background .2s, box-shadow, .2s;
+    touch-action: none;
+}
+
+.talk-cta:active {
+    background-color: #2F73C2;
+    box-shadow: 0 0.1rem 3rem 0.1rem rgba(36, 102, 177, 0.57);
+}
+
+.talk-email {
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.talk-email>a>p {
+    margin: 0;
+    padding: 0;
+}
+
+.talk-email>a {
+    color:#333;
+}
+
+.footer {
+    background-color: #333;
+    height: 8rem;
+    color: white;
+}
+
+.footer-item {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #eee;
+    color:#333;
+    border-radius: 1000px;
+    font-size: 2.8rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    box-shadow: 0 0.1rem 1rem 0.1rem rgba(221, 221, 221, 0.28);
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .2s, box-shadow, .2s;
+    touch-action: none;
+    text-decoration: none;
+}
+
+.footer-item:active {
+    background-color: #bbb;
+    box-shadow: 0 0.1rem 3rem 0.1rem rgba(221, 221, 221, 0.07);
+}
+
+a, a:hover, a:active {
+    text-decoration: none;
+}
+
+.item-image-extra {
+    display: none!important;
+}
+
+@media (min-width: 768px) {
+    .item-img {
+        width:19rem;
+        margin: 0.5rem;
+        margin-bottom: 3rem;
+        transition: transform, 0.2s;
+    }
+
+    video.item-img {
+        margin-top: calc(6px + 0.5rem);
+    }
+
+    h1{
+        font-size: 4rem;
+    }
+
+    .header {
+        height: 90vh;
+    }
+
+    .header-description {
+        font-size: 1.35rem;
+        font-weight: 300;
+        height: 10vh;
+        margin-bottom: 2.5rem;
+    }
+
+    .item-info {
+        margin-bottom: 2.5rem;
+        padding-right: 1rem;
+    }
+
+    .item-tags {
+        margin-bottom: 5.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .talk-info {
+        text-align: center;
+    }
+
+    .talk-cta {
+        margin-bottom: 3.5rem;
+    }
+
+    .img-text {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .item-heading {
+        margin-bottom: 2.5rem;
+    }
+
+    .item-img:hover {
+        transform: scale(1.05);
+        z-index: 10;
+        position: relative;
+    }
+
+    .floating-button {
+        display: none;
+    }
+
+    .talk-cta {
+        margin-top: 1.5rem;
+    }
+
+    .genie-thumb {
+        background-color: #58c4b6;
+        background: url('genie_thumb.png');
+        background-size: 100% auto;
+        height: 90.5%;
+        transform: translateY(-6px);
+    }
+}
+
+@media (min-width: 992px) {
+    .item-image-extra {
+        display: initial!important;
+    }
+}
+
+a.no-decoration {
+    text-decoration: none;
+    color: initial;
+}

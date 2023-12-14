@@ -1,0 +1,87 @@
+<html>
+    <header>
+        <script>
+        var host = "patrickpissurno.com.br";
+        if ((host == window.location.host) && (window.location.protocol != "https:"))
+        {
+            window.stop();
+            window.location.protocol = "https";
+        }
+        </script>
+        <title>Which Side</title>
+    </header>
+    <style>
+        @font-face {
+            font-family: regular;
+            src: url(content/regular.ttf);
+        }
+        @font-face {
+            font-family: light;
+            src: url(content/light.ttf);
+        }
+        h1,h2,h3,h4,h5{
+            font-family: light;
+        }
+        .div-box{
+            width:calc(80% - 2px);
+            border-style:solid;
+            border-width:1px;
+            border-color:#FFF;
+            display:inline-block;
+            color:#FFF;
+        }
+    </style>
+    <script>
+          var tag = document.createElement('script');
+
+          tag.src = "https://www.youtube.com/iframe_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+          var player;
+          function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '399',
+                width: '710',
+                videoId: 'qCLhfvf-_hI',
+                playerVars:{
+                    autoplay:1,
+                    showinfo:0,
+                    controls:0
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+          }
+
+          function onPlayerReady(event) {
+            event.target.playVideo();
+          }
+        
+          function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.ENDED) {
+                document.getElementById("player").parentNode.removeChild(document.getElementById("player"));
+            }
+          }
+    </script>
+    <body style="background-color:#208FCB;">
+        <center>
+            <img src="content/header.png" style="height:40%">
+            <div style="height:1px;width:100%;background-color:#FFF;display:inline-block;"></div>
+            <div class="div-box" style="margin-top:-1;background-color:#096799;">
+            <div id="player"></div>
+            </div>
+            <div style="width:80%;background-color:#FFF;display:inline-block;color:#208FCB"><h1>Download now</h1></div><br>
+            <div class="div-box">
+                <a href="https://www.facebook.com/WhichSideGame/" target="_blank"><img src="content/facebook.png" style="margin-top:10px;padding-bottom:10px;width:5%;"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.patrickpissurno.whichside"><img src="content/googleplay.png" style="margin-top:10px;padding-bottom:10px;width:15%;"></a>
+                <a href="https://www.slidedb.com/games/which-side" title="View Which Side on Slide DB" target="_blank"><img src="https://button.slidedb.com/popularity/medium/games/50942.png" alt="Which Side" style="margin-top:10px;padding-bottom:10px;width:25%;" /></a>
+                <a href="https://www.twitter.com/WhichSideGame/" target="_blank"><img src="content/twitter.png" style="margin-top:10px;padding-bottom:10px;width:5%;"></a>
+            </div>
+            <h4 style="color:white">Do you want to write about the game? Take a look at the <a href="presskit.html">Press kit</a></h4>
+            <div style="height:1px;width:100%;background-color:#FFF;display:inline-block;"></div>
+            <h5 style="color:white">Which Side, Copyright &copy; <a href="https://patrickpissurno.com.br/" target="_blank">Patrick Pissurno</a> 2016</h5>
+        </center>
+    </body>
+</html>

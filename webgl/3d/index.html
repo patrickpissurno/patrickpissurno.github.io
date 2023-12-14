@@ -1,0 +1,146 @@
+<html lang="pt">
+    <head>
+        <title>Patrick Pissurno - T2</title>
+        <link rel="stylesheet" href="./libs/normalize.css">
+        <link rel="stylesheet" href="./libs/dat.gui.css">
+        <script type="text/javascript" src="./libs/dat.gui.js"></script>
+        <script type="text/javascript" src="./libs/gl-matrix.js"></script>
+        <script type="text/javascript" src="./libs/sweetalert2.all.min.js"></script>
+
+        <script id="vertex-shader" type="x-shader/x-vertex">
+            #version 300 es
+
+            uniform mat4 u_projection;
+            uniform mat4 u_camera_transform;
+            uniform mat4 u_transform;
+            uniform mat4 u_transform_inverse_transpose;
+            in vec4 a_position;
+            in vec3 a_normal;
+            in vec4 a_color;
+            
+            out vec4 v_position;
+            out vec3 v_normal;
+            out vec4 v_color;
+
+            void main(void){
+                vec4 pos = a_position * u_transform;
+                gl_Position = u_projection * u_camera_transform * pos;
+
+                v_position = pos;
+                v_normal = a_normal * mat3(u_transform_inverse_transpose);
+                v_color = a_color;
+            }
+        </script>
+
+        <script id="fragment-shader" type="x-shader/x-fragment">
+            #version 300 es
+            precision mediump float;
+            out vec4 r_color;
+
+            uniform vec3 u_ambient_light;
+            uniform vec3 u_direct_light;
+
+            in vec4 v_position;
+            in vec3 v_normal;
+            in vec4 v_color;
+            
+            void main(void) {
+                vec3 normal = normalize(v_normal);
+                float light = max(dot(normal, normalize(u_direct_light * -1.0)), 0.0);
+                r_color = vec4((v_color.rgb * light) + (u_ambient_light * v_color.rgb), 1.0);
+            }
+        </script>
+
+        <script id="vertex-shader-textured" type="x-shader/x-vertex">
+            #version 300 es
+
+            uniform mat4 u_projection;
+            uniform mat4 u_camera_transform;
+            uniform mat4 u_transform;
+            uniform mat4 u_transform_inverse_transpose;
+            uniform float u_texture_scale;
+            uniform float u_texture_tiling;
+            in vec4 a_position;
+            in vec3 a_normal;
+            in vec2 a_texcoord;
+            
+            out vec4 v_position;
+            out vec3 v_normal;
+            out vec2 v_texcoord;
+
+            void main(void){
+                vec4 pos = a_position * u_transform;
+                gl_Position = u_projection * u_camera_transform * pos;
+
+                v_position = pos;
+                v_normal = a_normal * mat3(u_transform_inverse_transpose);
+                v_texcoord = a_texcoord.xy * (1.0 - u_texture_tiling) + 
+                    (vec3(a_texcoord.y, 1.0, a_texcoord.x) * mat3(u_transform)).xz * u_texture_scale * u_texture_tiling;
+            }
+        </script>
+
+        <script id="fragment-shader-textured" type="x-shader/x-fragment">
+            #version 300 es
+            precision mediump float;
+            out vec4 r_color;
+
+            uniform vec3 u_ambient_light;
+            uniform vec3 u_direct_light;
+            uniform sampler2D u_texture;
+
+            in vec4 v_position;
+            in vec3 v_normal;
+            in vec2 v_texcoord;
+            
+            void main(void) {
+                vec4 color = texture(u_texture, v_texcoord);
+                vec3 normal = normalize(v_normal);
+                float light = max(dot(normal, normalize(u_direct_light * -1.0)), 0.0);
+                r_color = vec4((color.rgb * light) + (u_ambient_light * color.rgb), 1.0);
+            }
+        </script>
+        
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            .holder {
+                width: 100%;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #canvas {
+                position: absolute;
+                width: 100vw;
+                height: 100vh;
+            }
+            .dg .cr.function .property-name {
+                width: 100%;
+            }
+            .dg .cr.function .property-name, .folder > .dg > ul > .title {
+                user-select: none;
+            }
+            .help {
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="holder">
+            <canvas id="canvas">Seu navegador não suporta o canvas.</canvas>
+        </div>
+        <script>window.Meshes = {}; window.ObjMeshes = [];</script>
+
+        <!-- importa as meshes -->
+        <script type="text/javascript" src="./meshes/cube.js"></script>
+        <script type="text/javascript" src="./meshes/table.obj.js"></script>
+        <script type="text/javascript" src="./meshes/chair.obj.js"></script>
+        <script type="text/javascript" src="./meshes/sink.obj.js"></script>
+        <script type="text/javascript" src="./meshes/fridge.obj.js"></script>
+        <script type="text/javascript" src="./meshes/bed.obj.js"></script>
+
+        <script type="text/javascript" src="./main.js"></script>
+    </body>
+</html>

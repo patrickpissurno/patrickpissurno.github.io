@@ -1,0 +1,281 @@
+body {
+    background: #5D59DB;
+    color: white;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.page1 .header img {
+    max-width: 9rem;
+}
+.page1 .header h1 {
+    font-size: 2.1rem;
+    font-style: italic;
+}
+
+.page1 .header-lead {
+    background: white;
+    color: #FF487E;
+    border-bottom: 1px solid #FF487E;
+}
+
+.page1 .header-lead p{
+    margin: 0;
+    max-width: 18rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.page1 .description {
+    background: white;
+    color: #333;
+    flex-grow: 1;
+}
+
+.page1 .description p{
+    margin: 0;
+    max-width: 20rem;
+    font-weight: 500;
+}
+
+.page1 .description .d-lead{
+    font-style: italic;
+    color: #5D59DB;
+    font-weight: 600;
+    text-align: center;
+    max-width: 18rem;
+}
+
+.page1 .steps {
+    background: #FF487E;
+    color: white;
+}
+
+.page1 .steps p {
+    margin: 0;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.page2, .page3, .page4 {
+    position: relative;
+}
+
+.page2 .floating-number, .page3 .floating-number, .page4 .floating-number {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+}
+
+.page2 img, .page4 img {
+    max-width: 23.43rem;
+}
+
+.page2 .btn {
+    min-width: 13.75rem;
+    min-height: 3.38rem;
+    font-size: 1.35rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page2 p, .page3 p, .page4 p {
+    margin: 0;
+    font-size: 1.1rem;
+    max-width: 17rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.page2 .safety-badge {
+    text-align: center;
+    position: absolute;
+    bottom: 0.5rem;
+    width: 100%;
+}
+
+.page2 .safety-badge a {
+    color: white!important;
+    text-decoration: underline!important;
+}
+
+.page3 img {
+    max-width: 25.5rem;
+}
+
+.page3 a>img {
+    width: 100%;
+    max-width: 13.75rem;
+}
+
+.page4 p {
+    max-width: 14.5rem;
+}
+
+.page5 {
+    background: white;
+    color: #333;
+}
+
+.page5 .header {
+    background: #FF487E;
+    color: white;
+}
+
+.page5 .header p {
+    margin: 0;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.page5 .description {
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.page5 ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.page5 li {
+    padding-left: 1.3em;
+    text-indent: -1.3em;
+    margin-bottom: 0.75rem;
+}
+
+.page5 li:last-child {
+    margin-bottom: 0;
+}
+
+.page5 li:before {
+    font-family: "fontello";
+    content: '\e801';
+    padding-right: 5px;
+}
+
+.page6 {
+    position: relative;
+}
+
+.page6 .carousel {
+    max-width: 20rem;
+    box-shadow: 0px 0px 1px 0px rgba(255,255,255,0.81), 0px 0px 15px 0px rgba(255,255,255,0.31);
+    position: static!important;
+}
+
+.page6 .carousel-control-prev, .page6 .carousel-control-next{
+    width: 20px;
+}
+
+.page7 {
+    background: white;
+    color: #FF487E;
+}
+
+.page7 p {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+    max-width: 18rem;
+}
+
+.page7 img {
+    max-width: 27rem;
+}
+
+.page7 a>img {
+    width: 100%;
+    max-width: 13.75rem;
+}
+
+.page7 .copyright {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    max-width: 13rem;
+}
+
+.page7 .copyright a {
+    text-decoration: none!important;
+}
+
+.page7 .hero-img {
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+}
+
+.btn-light {
+    color: #FF487E!important;
+    text-transform: uppercase;
+    font-weight: 500;
+    box-shadow: 2px 2px 15px 0px rgba(255,255,255,0.31);
+}
+
+.spacer {
+    border-bottom: 1px solid #FFF;
+}
+
+a.svg {
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .page-group {
+        display: flex;
+        justify-content: stretch;
+    }
+
+    .page2, .page3, .page4 {
+        min-height: 40rem;
+        flex-grow: 1;
+    }
+
+    .spacer {
+        border-bottom: none;
+        border-right: 1px solid #FFF;
+    }
+
+    .page5, .page6 {
+        min-height: auto;
+    }
+
+    .page5 .description {
+        padding-top: 7rem!important;
+        padding-bottom: 7rem!important;
+    }
+
+    .page6 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .page6 .carousel {
+        position: relative!important;
+    }
+
+    .page6 .carousel-control-prev {
+        left: -2.1rem;
+    }
+
+    .page6 .carousel-control-next {
+        right: -2.1rem;
+    }
+}

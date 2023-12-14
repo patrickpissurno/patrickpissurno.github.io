@@ -1,0 +1,99 @@
+<html lang="pt">
+    <head>
+        <title>Patrick Pissurno - T1</title>
+        <link rel="stylesheet" href="./libs/normalize.css">
+        <link rel="stylesheet" href="./libs/dat.gui.css">
+        <script type="text/javascript" src="./libs/dat.gui.js"></script>
+        <script type="text/javascript" src="./libs/gl-matrix.js"></script>
+        <script type="text/javascript" src="./libs/sweetalert2.all.min.js"></script>
+        <script type="text/javascript" src="./libs/ctxmenu.min.js"></script>
+        <script type="text/javascript" src="./libs/FileSaver.min.js"></script>
+
+        <script id="vertex-shader" type="x-shader/x-vertex">
+            #version 300 es
+
+            uniform mat4 u_screen_to_clip;
+            uniform mat4 u_transform;
+            in vec2 a_position;
+            
+            out vec4 v_position;
+
+            void main(void){
+                vec4 pos = vec4(a_position, 0.0, 1.0) * u_transform;
+                gl_Position = pos * u_screen_to_clip;
+
+                v_position = pos;
+            }
+        </script>
+
+        <script id="fragment-shader" type="x-shader/x-fragment">
+            #version 300 es
+            precision mediump float;
+            uniform vec4 u_color;
+            out vec4 r_color;
+
+            uniform bool u_dashed;
+            in vec4 v_position;
+            
+            void main(void) {
+                if(u_dashed){
+                    float mult = mod(floor(v_position.x * 10.0) + floor(v_position.y * 10.0), 2.0);
+                    r_color = vec4(mult,mult,mult,1.0) + u_color;
+                }
+                else
+                    r_color = u_color;
+            }
+        </script>
+
+        <script id="fragment-shader-atlas" type="x-shader/x-fragment">
+            #version 300 es
+            precision highp float;
+
+            uniform vec4 u_id;
+            out vec4 r_color;
+            
+            void main(void) {
+                r_color = u_id;
+            }
+        </script>
+
+        <style>
+            body, .ctxmenu {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            .holder {
+                width: 100%;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #canvas {
+                position: absolute;
+                width: 100vw;
+                height: 100vh;
+            }
+            .dg .cr.function .property-name {
+                width: 100%;
+            }
+            .dg .cr.function .property-name, .folder > .dg > ul > .title {
+                user-select: none;
+            }
+            #file-input {
+                position: absolute;
+                opacity: 0;
+                top: -100vh;
+            }
+            .help {
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="file" id="file-input" accept=".json" />
+        <div class="holder">
+            <canvas id="canvas">Seu navegador não suporta o canvas.</canvas>
+        </div>
+        <script type="text/javascript" src="./main.js"></script>
+    </body>
+</html>
