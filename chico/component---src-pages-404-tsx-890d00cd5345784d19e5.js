@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfrancisco_araujo=self.webpackChunkfrancisco_araujo||[]).push([[218],{2513:function(a,u,n){n.r(u),n.d(u,{Head:function(){return e.Head},default:function(){return e.default}});var e=n(2736)}}]);
